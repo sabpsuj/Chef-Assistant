@@ -1,0 +1,61 @@
+{
+  "recipe": [
+    {
+      "name": "Jajko na twardo",
+      "img": "https://cdn.pixabay.com/photo/2016/01/12/14/53/boiled-eggs-1135746_960_720.jpg",
+      "time": 10,
+      "ingredients": "",
+      "recipe": "Włóż jajko do garnka, zalej wodą tak by całe znalazło się pod jej powierzchnią. Od zagotowania wody, gotuj jeszcze przez 7 minut. Smacznego!",
+      "type": "",
+      "id": 1
+    },
+    {
+      "name": "Ziemniaki w mundurkach",
+      "img": "https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/mlode-ziemniaki-pieczone-w-mundurkach-113869.jpg",
+      "time": 30,
+      "ingredients": [],
+      "recipe": "Wyszoruj ziemniaki szczotką pod bieżącą wodą. Wrzuć do garnka i zalej wodą, tak aby ziemniaki znalazły się pod jej powierzchnią. Od zagotowania wody,gotuj przez 20 minut.  Smacznego!",
+      "breakfast": false,
+      "dinner": true,
+      "supper": false,
+      "desert": false,
+      "sideDish": false,
+      "id": 2
+    },
+    {
+      "name": "Żurek",
+      "img": "http://cdn13.beszamel.smcloud.net/t/thumbs/660/441/1/user_photos/shutterstock_538139728.jpg",
+      "time": 40,
+      "ingredients": [
+        "kiełbasa  1",
+        "zakwas  5",
+        "warzywa  10"
+      ],
+      "recipe": "Żurek żurek lalalla",
+      "breakfast": false,
+      "dinner": true,
+      "supper": false,
+      "desert": false,
+      "sideDish": false,
+      "id": 9
+    },
+    {
+      "name": "Kotlet mielony",
+      "img": "http://www.restauracjaiguana.pl/wp-content/uploads/2015/06/mielone.jpg",
+      "time": 30,
+      "ingredients": [
+        " cebula  1",
+        " mięsa mielonego wieprzowego  500 g",
+        " sól  1 szczypta",
+        "pieprz  1 szczypta"
+      ],
+      "recipe": "Bułkę zalać mlekiem lub wodą, odstawić do namoczenia na około 5-10 minut. Do większej miski włożyć zmielone mięso, cebulę, jajko, sól i pieprz oraz odciśniętą bułkę. Wszystko dobrze wymieszać. W trakcie wyrabiania mięsa należy dodawać po troszku zimnej wody i wyrabiać tak długo aż mięso wodę wchłonie i nie będzie przywierać do dłoni. Im dłużej wyrabiamy, tym lepsze kotlety. \nUformować kotlety, obtoczyć w bułce tartej i kłaść na dobrze rozgrzany olej na patelni. Po obsmażeniu z dwóch stron dobrze jest przełożyć kotlety do garnka lub naczynia żaroodpornego (bez przykrycia) i wstawić do rozgrzanego do 150 stopni C piekarnika, na około 15 minut. Unikniemy długiego smażenia, a kotlety będą w środku idealnie miękkie.",
+      "breakfast": false,
+      "dinner": true,
+      "supper": true,
+      "desert": false,
+      "sideDish": false,
+      "id": 10
+    }
+  ]
+}

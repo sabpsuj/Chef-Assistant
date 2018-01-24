@@ -1,142 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FormControl from './form_control.jsx';
+import Home from './home.jsx';
+import Timer from './timer.jsx';
+import Memory from './memory.jsx';
+import NotFound from './not_found.jsx';
+import Recipe from './recipe.jsx';
+import {
+    Router,
+    Route,
+    Link,
+    IndexLink,
+    IndexRoute,
+    hashHistory
+} from 'react-router';
 
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    class Name extends React.Component {
-        handleChange = (e) => {
-            console.log(e.target.element);
-        };
-
-        render() {
-            return (
+    class Template extends React.Component{
+        render(){
+            return(
                 <div>
-                    <p>Nazwa potrawy:</p>
-                    <input type={'text'} onChange={this.handleChange} value={this.props.name}/>
+                    <ul>
+                        <li><Link to="/">Przepisy</Link></li>
+                        <li><Link to="/add_recipe">Dodaj przepis</Link></li>
+                        <li><Link to="/timer">Timer</Link></li>
+                        <li><Link to="/memory">Graj!</Link></li>
+                    </ul>
+                    {this.props.children}
+                    <div>
+                        <Recipe/>
+                        <Recipe/>
+                        <Recipe/>
+                        <Recipe/>
+                    </div>
                 </div>
             )
         }
     }
-
-    class Ingredients extends React.Component {
-        handleChange = (e) => {
-            console.log(e.target.element);
-        };
-
-        render() {
-            return (
-                <div>
-                    <p>Składniki:</p>
-                    <label>Dodaj składnik</label>
-                    <button>+</button>
-                </div>
-            )
-        }
-    }
-
-    class Type extends React.Component {
-        handleChange = (e) => {
-            console.log(e.target.element);
-        };
-
-        render() {
-            return (
-                <div>
-                    <p>Typ potrawy:</p>
-                    <label>Śniadanie</label>
-                    <input type={'checkbox'} onChange={this.handleChange} checked={false}></input>
-                    <label>Obiad</label>
-                    <input type={'checkbox'} onChange={this.handleChange} checked={false}></input>
-                    <label>Kolacja</label>
-                    <input type={'checkbox'} onChange={this.handleChange} checked={false}></input>
-                    <label>Deser</label>
-                    <input type={'checkbox'} onChange={this.handleChange} checked={false}></input>
-                    <label>Przekąska</label>
-                    <input type={'checkbox'} onChange={this.handleChange} checked={false}></input>
-                </div>
-            )
-        }
-    }
-
-    class Image extends React.Component {
-        handleChange = (e) => {
-            console.log(e.target.element);
-        };
-
-        render() {
-            return (
-                <div>
-                    <p>Dodaj zdjęcie potrawy:</p>
-                    <input type={'text'} onChange={this.handleChange} value={this.props.url}/>
-                </div>
-            )
-        }
-    }
-
-    class Time extends React.Component {
-        handleChange = (e) => {
-            console.log(e.target.element);
-        };
-
-        render() {
-            return (
-                <div>
-                    <p>Czas przygotowania w minutach:</p>
-                    <input type={'text'} onChange={this.handleChange} value={this.props.time}/>
-                </div>
-            )
-        }
-    }
-
-    class Recipe extends React.Component {
-        handleChange = (e) => {
-            console.log(e.target.element);
-        };
-
-        render() {
-            return (
-                <div>
-                    <p>Przygotowanie</p>
-                    <textarea onChange={this.handleChange} value={this.props.recipe}></textarea>
-                </div>
-            )
-        }
-    }
-
-    class Form extends React.Component {
-        state = {
-            name: '',
-            url: '',
-            time: 0,
-            ingredients: '',
-            recipe: `Opisz jak przygotować Twoje danie... `,
-            type: ''
-        };
-
-        render() {
-            return (
-                <div>
-                    <fieldset>
-                        <legend>Dodaj przepis</legend>
-                        <form>
-                            <Name name={this.state.name}/>
-                            <Ingredients ingredients={this.state.ingredients}/>
-                            <Type type={this.state.type}/>
-                            <Image url={this.state.url}/>
-                            <Time time={this.state.time}/>
-                            <Recipe recipe={this.state.recipe}/>
-                        </form>
-                    </fieldset>
-                </div>
-            )
-        }
-    }
-
     class App extends React.Component {
         render() {
             return (
-                <Form/>
+                <Router history={hashHistory}>
+                    <Route path='/' component={Template}>
+                        <IndexRoute component={Home} />
+                        <Route path='/add_recipe' component={FormControl} />
+                        <Route path='/timer' component={Timer} />
+                        <Route path='/memory' component={Memory} />
+                        <Route path='*' component={NotFound} />
+                    </Route>
+                </Router>
             )
         }
     }
