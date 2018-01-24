@@ -29,12 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li><Link to="/memory">Graj!</Link></li>
                     </ul>
                     {this.props.children}
-                    <div>
-                        <Recipe/>
-                        <Recipe/>
-                        <Recipe/>
-                        <Recipe/>
-                    </div>
                 </div>
             )
         }

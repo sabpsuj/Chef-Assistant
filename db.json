@@ -56,6 +56,23 @@
       "desert": false,
       "sideDish": false,
       "id": 10
+    },
+    {
+      "name": "Truskawki ze śmietaną",
+      "img": "http://3.bp.blogspot.com/-x-gGRjcbSVE/T9IB2p7rH9I/AAAAAAAAAQA/Nq6f3Is9m8c/s1600/DSC01074.jpg",
+      "time": 10,
+      "ingredients": [
+        "truskawki  300 g",
+        "cukier  1 łyżeczka",
+        "śmietana  50 ml"
+      ],
+      "recipe": "Truskawki umyj, odkrój szypułki. Przełóż do salaterki, polej śmietaną i posyp cukrem. Smacznego",
+      "breakfast": false,
+      "dinner": false,
+      "supper": false,
+      "desert": true,
+      "sideDish": true,
+      "id": 11
     }
   ]
 }
