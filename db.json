@@ -4,7 +4,12 @@
       "name": "Jajko na twardo",
       "img": "https://cdn.pixabay.com/photo/2016/01/12/14/53/boiled-eggs-1135746_960_720.jpg",
       "time": 10,
-      "ingredients": "",
+      "ingredients": [
+        " jajko 1",
+        " woda 300ml",
+        " sól  1 szczypta",
+        "pieprz  1 szczypta"
+      ],
       "recipe": "Włóż jajko do garnka, zalej wodą tak by całe znalazło się pod jej powierzchnią. Od zagotowania wody, gotuj jeszcze przez 7 minut. Smacznego!",
       "type": "",
       "id": 1
@@ -13,7 +18,10 @@
       "name": "Ziemniaki w mundurkach",
       "img": "https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/mlode-ziemniaki-pieczone-w-mundurkach-113869.jpg",
       "time": 30,
-      "ingredients": [],
+      "ingredients": [
+        " ziemniaki 1kg",
+        " woda 1l"
+      ],
       "recipe": "Wyszoruj ziemniaki szczotką pod bieżącą wodą. Wrzuć do garnka i zalej wodą, tak aby ziemniaki znalazły się pod jej powierzchnią. Od zagotowania wody,gotuj przez 20 minut.  Smacznego!",
       "breakfast": false,
       "dinner": true,
@@ -45,7 +53,7 @@
       "time": 30,
       "ingredients": [
         " cebula  1",
-        " mięsa mielonego wieprzowego  500 g",
+        " mięso mielone wieprzowe 500 g",
         " sól  1 szczypta",
         "pieprz  1 szczypta"
       ],
@@ -73,6 +81,59 @@
       "desert": true,
       "sideDish": true,
       "id": 11
+    },
+    {
+      "name": "Surówka z marchwi",
+      "img": "http://familijny.blox.pl/resource/surowka_z_marchewki_1.jpg",
+      "time": 15,
+      "ingredients": [
+        "marchew  1 kg",
+        "cukier  1 łyżeczka",
+        "sok z cytryny  0,5 szklanki"
+      ],
+      "recipe": "Marchew zetrzyj na tarce o małych oczkach. Dodaj sok z cytryny i cukier. Wymieszaj. Smacznego!",
+      "breakfast": true,
+      "dinner": true,
+      "supper": false,
+      "desert": false,
+      "sideDish": true,
+      "id": 12
+    },
+    {
+      "name": "Pierogi ruskie",
+      "img": "https://static.smaker.pl/photos/6/4/6/64630c564f5b85beb994a15bb9582172_362397_551278446a7a2_wm.jpg",
+      "time": 45,
+      "ingredients": [
+        "mąka  0.5 kg",
+        "twaróg  0.5 kg",
+        "cebula  3-4 sztuki",
+        "sól  1 łyżeczka",
+        "pieprz  0.5 łyżeczka",
+        "ziemniaki  0.5 kg"
+      ],
+      "recipe": "Nadzienie: ziemniaki obrać, opłukać, włożyć do garnka, dodać sól, przykryć zimną wodą i zagotować. Gotować pod uchyloną pokrywą przez około pół godziny lub do miękkości. Odcedzić, włożyć z powrotem do garnka i jeszcze gorące roztłuc dokładnie tłuczkiem do ziemniaków na gładką masę bez grudek. Ziemniaki całkowicie ostudzić, odparować.\nSer pokruszyć, rozgnieść widelcem lub praską (sera nie mielimy w maszynce bo nadzienie wyjdzie za rzadkie). Wymieszać z ziemniakami, doprawić solą i pieprzem. Cebulkę pokroić w kostkę i zeszklić na maśle lub smalcu, dodać do nadzienia, wymieszać.\nSzklanką wycinać kółka z ciasta, na środek nakładać po jednej pełnej łyżce farszu (lub tyle ile się zmieści). Składać ciasto na pół i zlepiać dokładnie brzegi, uważając aby nadzienie nie dostało się w miejsce sklejenia. Gotowe pierogi układać na stolnicy lub blacie podsypanych mąką. Przykryć ściereczką do czasu gotowania, aby nie obeschły.\nW dużym garnku zagotować osoloną wodę z dodatkiem łyżki oleju, oliwy lub masła i jak będzie mocno wrzała, włożyć pierwszą partię pierogów (około 15 sztuk). Po ponownym zagotowaniu zmniejszyć ogień do średniego i gotować pierogi do czasu wypłynięcia na powierzchnię. Po wypłynięciu pierogów gotować je jeszcze przez około 1,5 minuty (wyłowić jednego pieroga łyżką cedzakową i sprawdzić palcem czy ciasto jest już miękkie, dokładny czas gotowania będzie zależał między innymi od grubości ciasta i wielkości pierogów). Pierogi wyławiać łyżką cedzakową i układać na talerzach.",
+      "breakfast": false,
+      "dinner": true,
+      "supper": true,
+      "desert": false,
+      "sideDish": false,
+      "id": 13
+    },
+    {
+      "name": "Eskalopki cielęce",
+      "img": "https://cdn.doradcasmaku.pl/dynamic/2d/e8/6e/30/1215db79775a5c5171c24201/p1010053_fit-800-600.jpg",
+      "time": 45,
+      "ingredients": [
+        "mięso cielęce  0.5 kg",
+        "ogórek kiszony  3-4 sztuki"
+      ],
+      "recipe": "Najlepiej poproś Mamę by Ci zrobiła :D",
+      "breakfast": false,
+      "dinner": true,
+      "supper": false,
+      "desert": false,
+      "sideDish": false,
+      "id": 14
     }
   ]
 }

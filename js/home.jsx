@@ -2,14 +2,11 @@ import React from 'react';
 import {Recipe, SearchBar} from "./recipe.jsx";
 
 
-class Home extends React.Component{
-    render(){
-        return(
+class Home extends React.Component {
+    render() {
+        return (
             <div>
-                <SearchBar />
-                <div>
-                    <Recipe/>
-                </div>
+                <Recipe/>
             </div>
         )
     }

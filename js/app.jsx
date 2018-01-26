@@ -5,6 +5,7 @@ import Home from './home.jsx';
 import Timer from './timer.jsx';
 import Memory from './memory.jsx';
 import NotFound from './not_found.jsx';
+import './../css/style.scss';
 import Recipe from './recipe.jsx';
 import {
     Router,
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         render(){
             return(
                 <div>
-                    <ul>
+                    <ul className={'menu'}>
                         <li><Link to="/">Przepisy</Link></li>
                         <li><Link to="/add_recipe">Dodaj przepis</Link></li>
                         <li><Link to="/timer">Timer</Link></li>

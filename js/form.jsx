@@ -20,7 +20,7 @@ class AddIngredients extends React.Component{
     render(){
         return(
             <div>
-                <fieldset>Dodaj składniki:
+                <fieldset>
                 <input type={'text'}></input>
                 <input type={'text'}></input>
                 <div>+</div>
@@ -51,9 +51,11 @@ class IngredientToAdd extends React.Component{
     render(){
         return(
             <div>
-                <input type={"text"} value={this.props.number} onChange={this.handleChangeNumber}/>
+                <p>Nazwa składnika</p>
                 <input type={"text"} value={this.props.ingr} onChange={this.handleChangeIngr}/>
-                <div style={{border: '1px solid black'}} onClick={this.handleClick}>DODAJ</div>
+                <p>Ilość składnika</p>
+                <input type={"text"} value={this.props.number} onChange={this.handleChangeNumber}/>
+                <div className={"addIngr"} onClick={this.handleClick}>DODAJ</div>
             </div>
         )
     }
@@ -102,14 +104,16 @@ class Ingredients extends React.Component {
         return (
             <div>
                 <p>Składniki:</p>
+                <div className={'add'}>
                 <label>Dodaj składnik</label>
                 <div onClick={this.handleClickAdd}>+</div>
-                <fieldset style={{display: this.state.display}}>Dodaj składniki
+                </div>
+                <div className={'close'} onClick={this.handleClickAddList} style={{display: this.state.display}}>X</div>
+                <fieldset style={{display: this.state.display}}>
                     <IngredientToAdd onClick={this.handleClickAddToList} ingr={this.state.ingr} number={this.state.number} onChangeIngr={this.handleChangeIngr} onChangeNum={this.handleChangeNum}/>
                     <ul>
                         {list}
                     </ul>
-                    <div style={{border: '1px solid black'}} onClick={this.handleClickAddList}>DODAJ LISTĘ SKŁADNIKÓW</div>
                 </fieldset>
 
             </div>
@@ -126,8 +130,9 @@ class Type extends React.Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <p>Typ potrawy:</p>
+                <div className={'type'}>
                 <label>Śniadanie</label>
                 <input type={'checkbox'} onChange={e=>this.props.onChange('breakfast', e.target.checked)} checked={this.props.breakfast}></input>
                 <label>Obiad</label>
@@ -138,6 +143,7 @@ class Type extends React.Component {
                 <input type={'checkbox'} onChange={e=>this.props.onChange('desert', e.target.checked)} checked={this.props.desert}></input>
                 <label>Przekąska</label>
                 <input type={'checkbox'} onChange={e=>this.props.onChange('sideDish', e.target.checked)} checked={this.props.sideDish}></input>
+                </div>
             </div>
         )
     }
@@ -199,9 +205,9 @@ class Form extends React.Component {
     state = {
         name: '',
         img: '',
-        time: 0,
+        time: '',
         ingredients: [],
-        recipe: `Opisz jak przygotować Twoje danie... `,
+        recipe: '',
         breakfast: false,
         dinner: false,
         supper: false,
@@ -269,11 +275,10 @@ class Form extends React.Component {
     };
     render() {
         return (
-            <div>
+            <div className={'form'}>
                 <fieldset>
-                    <legend>Dodaj przepis</legend>
                     <form onSubmit={this.handleSubmit}>
-                        <Name name={this.state.name} onChange={this.handleChangeName}/>
+                        <Name name={this.state.name} onChange={this.handleChangeName} value={this.state.nameInput}/>
                         <Ingredients ingredients={this.state.ingredients} onChange={this.handleChangeIngredients} onClick={this.handleAddIngredients}>
                             <AddIngredients/>
                         </Ingredients>

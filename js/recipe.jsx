@@ -3,7 +3,9 @@ import React from 'react';
 class Recipe extends React.Component {
     url = "http://localhost:3000/recipe";
     state = {
-        recipies: null
+        recipies: null,
+        display: 'none',
+        text: '',
     };
     showRecipe = (data) => {
         fetch(this.url)
@@ -23,23 +25,42 @@ class Recipe extends React.Component {
         });
     };
 
+    handleOnChange = (e) => {
+        this.setState({
+            text: e.target.value,
+        })
+    };
+
     componentDidMount() {
-        this.showRecipe();
+        this.showRecipe()
     }
 
     render() {
         if (this.state.recipies === null) {
             return <p>Dodaj przepis</p>;
         }
-        let recipeList = this.state.recipies ? this.state.recipies.map((i) => <li key={i.id}>
-            <div><h1>{i.name}</h1>
-                <img src={i.img}/>
-                <p>{i.recipe}</p></div>
-            <button data-id={i.id} onClick={this.handleClick}>Więcej</button>
-        </li>) : <p>Dodaj przepis</p>;
-        return (
-            <div>
-                <ul>
+        let recipeList = [];
+        if (this.state.text === '') {
+            recipeList = this.state.recipies.map((i) => <li key={i.id}>
+                <div><RecipeToShow name={i.name} img={i.img} time={i.time} ingredients={i.ingredients.join(' , ')}
+                                   recipe={i.recipe}/>
+                </div>
+            </li>);
+        } else {
+            this.state.recipies.forEach(el => {
+                el.ingredients.forEach(ing => {
+                    if (ing.includes(this.state.text)) {
+                        recipeList.push(<div><RecipeToShow name={el.name} img={el.img} time={el.time}
+                                                           ingredients={el.ingredients.join(' , ')} recipe={el.recipe}/></div>);
+
+                    }
+                })
+            })
+        }
+
+        return (<div><SearchBar recipies={this.state.recipies} textChange={this.handleOnChange}
+                                searchClick={this.handleOnClick} filterText={this.state.text}/>
+                <ul className={'recipes'}>
                     {recipeList}
                 </ul>
             </div>
@@ -47,35 +68,35 @@ class Recipe extends React.Component {
     }
 }
 
-class SearchBar extends React.Component {
+class RecipeToShow extends React.Component {
     render() {
         return (
             <div>
-                <input type="text" placeholder="Co masz w lodówce?" value={this.props.filterText}
-                       onChange={this.props.textChange}/>
-                <select>
-                    <option>Śniadanie</option>
-                    <option>Obiad</option>
-                    <option>Kolacja</option>
-                    <option>Deser</option>
-                    <option>Przekąska</option>
-                </select>
-                <div style={{border: '1px solid black'}}>Szukaj</div>
+                <h1>{this.props.name}</h1>
+                <img src={this.props.img}/>
+                <h2>Czas przygotowania: {this.props.time} minut</h2>
+                <p className={'ingr'}><span style={{fontWeight:'bold'}}>Składniki:</span> {this.props.ingredients}</p>
+                <p className={'content'}><span style={{fontWeight:'bold'}}>Sposób przygotowania:</span> {this.props.recipe}</p>
             </div>
         )
     }
 }
 
-class SearchRecipe extends React.Component {
+class SearchBar extends React.Component {
+
+    handleClick = () => {
+        if (typeof this.props.searchClick === 'function') {
+            this.props.searchClick(this.props.recipies)
+        }
+    };
+
     render() {
-        let rows = [];
-        this.state.recipies.forEach(el => {
-            el.ingredients.forEach(ing => {
-                console.log(ing);
-            })
-        });
-        return (<div></div>)
+        return (
+            <input className={'searchbar'} type="text" placeholder="Co masz w lodówce?" value={this.props.filterText}
+                   onChange={this.props.textChange}/>
+        )
     }
 }
+
 
 export {Recipe, SearchBar};
