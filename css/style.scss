@@ -42,8 +42,9 @@ $small-font-color: #4B786E;
   }
   .form:after {
     content: "";
-    background: url('./../img/pizza-2802332_1280.jpg') repeat-y;
+    height: 100%;
     background-size: cover;
+    background-position: center;
     opacity: .2;
     top: 0;
     left: 0;
@@ -170,7 +171,7 @@ $small-font-color: #4B786E;
   }
   //Timer
   .clock {
-    background: url('./../img/pizza-2802332_1280.jpg') repeat-y;
+    background: url('./../img/pizza-2802332_1280.jpg') repeat;
     background-size: cover;
     width: 22rem;
     height: 22rem;
@@ -288,6 +289,7 @@ $small-font-color: #4B786E;
       height: 50vh;
       background: url('./../img/cat-playing-with-ball.jpg') no-repeat;
       background-size: contain;
+      background-position: center;
     }
   }
 }
