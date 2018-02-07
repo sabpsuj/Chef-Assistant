@@ -7,20 +7,18 @@ Final project created during the “JavaScript developer: React” bootcamp.
 ## How to use 
 
 To clone and run this application, you'll need Git installed on your computer.
-Also Webpack is needed to running this app:
-```shell
-npm install --save-dev webpack
-npm install webpack-dev-server --hot
-npm install json-server --watch db.json
-```
+Clone repository and open it using command line.
 Then run it using:
 ```shell
 ./setup.sh
 ```
-And open:
+This step will install and run needed packages for you.
+
+Next open:
 ```shell
 http://localhost:3002/
 ```
+> Note that now (06.02.2018) it's just mobile version of the app (max-width: 600px). In the nearest future I plan to extend this also for desktop.
 
 ## Features
 
