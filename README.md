@@ -1,4 +1,4 @@
-![Picture](img/chef.png) # Chef Assistant ![Picture](img/chef.png)
+# Chef Assistant ![Picture](img/chef.png)
 Single-page application website; allows adding recipes, screen them and search by the ingredient name. 
 Final project created during the “JavaScript developer: React” bootcamp.
 
