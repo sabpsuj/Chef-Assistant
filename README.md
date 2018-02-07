@@ -33,7 +33,7 @@ Future features:
 - simple timer;
 - memory game.
 
-##Live preview
+## Live preview
 
 Here you can find live preview of Chef Assistant project:
 ```shell
