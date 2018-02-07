@@ -40,10 +40,3 @@ Here you can find live preview of Chef Assistant project:
 https://sabpsuj.github.io/ChefAssistant/
 ```
 > Note that now (06.02.2018) it's just mobile version of the app (max-width: 600px). In the nearest future I plan to extend this also for desktop.
-## Licensing
-
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
-
-"The code in this project is licensed under MIT license."
