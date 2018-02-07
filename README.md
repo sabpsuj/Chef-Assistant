@@ -10,14 +10,16 @@ To clone and run this application, you'll need Git installed on your computer.
 Also Webpack is needed to running this app:
 ```shell
 npm install --save-dev webpack
+npm install webpack-dev-server --hot
+npm install json-server --watch db.json
 ```
-Then configure it step by step:
+Then run it using:
 ```shell
-npm run serv
-npm run wp
-npm run api
-
-open http://localhost:3000/
+./test.sh
+```
+And open:
+```shell
+http://localhost:3000/
 ```
 
 ## Features
