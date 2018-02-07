@@ -16,7 +16,7 @@
     },
     {
       "name": "Ziemniaki w mundurkach",
-      "img": "https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/mlode-ziemniaki-pieczone-w-mundurkach-113869.jpg",
+      "img": "https://cdn.doradcasmaku.pl/dynamic/1/1050/0c53/f348/3801/6398/ba5b/3b55/b837/original_fit-800-600",
       "time": 30,
       "ingredients": [
         " ziemniaki 1kg",
@@ -134,6 +134,39 @@
       "desert": false,
       "sideDish": false,
       "id": 14
+    },
+    {
+      "name": "Zupa pomidorowa",
+      "img": "http://cdn19.beszamel.smcloud.net/t/thumbs/660/441/1/user_photos/zupa-pomidorowa-z-imbirem-przepis.jpg",
+      "time": 45,
+      "ingredients": [
+        "pomidory  0.5 kg",
+        "bulion  1 l"
+      ],
+      "recipe": "kaebfubvbdkvuriiud",
+      "breakfast": false,
+      "dinner": true,
+      "supper": false,
+      "desert": true,
+      "sideDish": false,
+      "id": 15
+    },
+    {
+      "name": "Rolada wołowa",
+      "img": "http://pychotka.pl/foto/rolada-wolowa(3).jpg",
+      "time": 120,
+      "ingredients": [
+        "mięso wołowe  1 kg",
+        "ogórek kiszony  4 sztuki",
+        "musztarda  6 łyżek"
+      ],
+      "recipe": "Mięso delikatnie rozbić zwiliżonym tłuczkiem, przyprawić sola, pieprzem, każdy płat posmarować musztardą. Cebule posiekać drobno, boczek na paseczki, ogórki pokroić w cienkie słupki. Kawałeczki cebuli, boczku i ogórka układać na płatach mięsa, każdy płat ściśle zawijać w roladę. Każdą spiąć wykałaczkami lub związać białą bawełnianą nicią. Przyprawić. Rozgrzać tłuszcz, kłaść rolady i mocno zrumienić. Następnie podlać ciepłym bulionem i dusić pod przykryciem około 1 godziny. Gdy rolady będą już miękkie wyciągnać wykałaczki lub usunąć nici, sos zagęścić odrobiną śmietany i mąki, podawać z kluskami śląskimi i modrą kapusta. Pycha!",
+      "breakfast": false,
+      "dinner": false,
+      "supper": false,
+      "desert": false,
+      "sideDish": false,
+      "id": 16
     }
   ]
 }

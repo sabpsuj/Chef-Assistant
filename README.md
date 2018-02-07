@@ -15,11 +15,11 @@ npm install json-server --watch db.json
 ```
 Then run it using:
 ```shell
-./test.sh
+./setup.sh
 ```
 And open:
 ```shell
-http://localhost:3000/
+http://localhost:3002/
 ```
 
 ## Features
