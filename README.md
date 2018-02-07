@@ -6,12 +6,8 @@ Final project created during the “JavaScript developer: React” bootcamp.
 
 ## How to use 
 
-To clone and run this application, you'll need Git installed on your computer. From your command line:
-
-```shell
-git clone https://github.com/sabpsuj/ChefAssistant.git
-```
-Also Webpack may be helpful to running this app:
+To clone and run this application, you'll need Git installed on your computer.
+Also Webpack is needed to running this app:
 ```shell
 npm install --save-dev webpack
 ```
@@ -20,6 +16,8 @@ Then configure it step by step:
 npm run serv
 npm run wp
 npm run api
+
+open http://localhost:3000/
 ```
 
 ## Features
