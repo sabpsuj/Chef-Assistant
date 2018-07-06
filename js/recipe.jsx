@@ -33,7 +33,7 @@ class Recipe extends React.Component {
 
     componentDidMount() {
         this.showRecipe()
-    }
+    };
 
     render() {
         if (this.state.recipies === null) {
